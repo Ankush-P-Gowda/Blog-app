@@ -3,7 +3,7 @@ methodOverride = require('method-override'),
 mongoose       = require('mongoose'),
 express        = require('express'),
 expressSanitizer=require('express-sanitizer'),
-app            = express(),port = 3000;
+app            = express(),port = proces.env.PORT || 3000;
 
 mongoose.connect('mongodb://localhost:27017/rest_blog_app', {useNewUrlParser:true});
 app.set('view engine','ejs');
