@@ -5,7 +5,7 @@ express        = require('express'),
 expressSanitizer=require('express-sanitizer'),
 app            = express(),port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost:27017/rest_blog_app', {useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/rest_blog_app', {useNewUrlParser:true});
 app.set('view engine','ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
