@@ -7,3 +7,9 @@ i.icon {
 #delete{
     display:inline;
 }
+span {
+    color:red;
+}
+em{
+    font-size: 15px;;
+}

@@ -1,6 +1,6 @@
 <%- include("./partials/header") %>
 <div class='ui main text container'>
-    <div class='ui huge header'>ALL Blogs</div>
+    <div class='ui huge header'>BLOGS</div>
     <div class='ui top attached segment'>
         <div class='ui divided items'>
             <% blogs.forEach(function(blog){ %>
@@ -9,12 +9,12 @@
                         <img src="<%= blog.image %>">
                     </div>
                     <div class='content'>
-                        <a class='header' href='/blogs/<%= blog._id %>'><%= blog.title%></a>
+                        <a class='header' href='/blogs/<%= blog._id %>'><%= blog.title%> - <em><%= blog.author%></em></a>
                         <div class='meta'>
-                            <span> <%= blog.created.toDateString() %> </span>
+                            <p> <%= blog.created.toDateString() %> </p>
                         </div>
                         <div class='description'>
-                            <p> <%=blog.body.substring(0, 50) %>... </p>
+                            <p> <%=blog.body.substring(0, 100) %>... </p>
                         </div>
                         <div class='extra'>
                             <a class='ui floated pink basic button' href='/blogs/<%= blog._id %>'>
